@@ -25,6 +25,24 @@
                         <label for="nombre" class="form-label">Nombre del producto</label>
                         <input type="text" class="form-control" id="nombre" name="Nombre">
                     </div>
+                    <div class="col-5">
+                        <label for="text">Tipo de Equipo</label>
+                        <select class="form-select" id="EquipoMant" name="EquipoMant">
+                            <option selected>Selecciona una opción</option>
+                            <option value="Computadora">Computadora</option>
+                            <option value="Impresora">Impresora</option>
+                            <option value="Proyector">Proyector</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Marca</label>
+                        <input type="text" class="form-control" id="marca" name="marca">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Modelo</label>
+                        <input type="text" class="form-control" id="modelo" name="modelo">
+                    </div>
+
                     <div class="mb-3">
                         <label for="cantidad" class="form-label">Cantidad</label>
                         <input type="number" class="form-control" id="cantidad" name="Cantidad">

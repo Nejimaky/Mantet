@@ -21,7 +21,27 @@
                 <div class="card bg-info mb-3" style="max-width: 18rem;">
                     <div class="card-header"><h4>Mant. programados</h4></div>
                     <div class="card-body">
-                        <p class="card-text">Numero de solicitudes {{ $valor }}</p>
+                        <p class="card-text"> {{ $valor }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card bg-info mb-3" style="max-width: 18rem;">
+                    <div class="card-header"><h4>Mant. Preventivo</h4></div>
+                    <div class="card-body">
+                        <p class="card-text"> {{ $valor }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card bg-info mb-3" style="max-width: 18rem;">
+                    <div class="card-header"><h4>Mant. Correctivo</h4></div>
+                    <div class="card-body">
+                        <p class="card-text"> {{ $valor }}</p>
                     </div>
                 </div>
             </div>

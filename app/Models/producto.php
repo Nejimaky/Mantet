@@ -11,7 +11,7 @@ class producto extends Model
     protected $table = 'producto';
     protected $primaryKey = 'ID_Producto';
 
-    protected $fillable = ['Nombre', 'Cantidad'];
+    protected $fillable = ['Nombre','equipomant','marca','modelo', 'Cantidad'];
 
     /* por defecto se envian los siguientes campos en eloquoent  updated_at  y created_at*/
     /* esto evita que se envien esos campos */

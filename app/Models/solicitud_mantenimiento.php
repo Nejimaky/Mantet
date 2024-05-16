@@ -13,6 +13,7 @@ class solicitud_mantenimiento extends Model
 
     protected $fillable = [
         'Area_solicitante',
+        'ProductoMant',
         'Nombre_del_solicitante',
         'Fecha',
         'Nombre_del_ejecutante',

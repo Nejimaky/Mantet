@@ -22,6 +22,7 @@
                         <th>Area solicitante</th>
                         <th>Nombre del solicitante</th>
                         <th>Fecha</th>
+                        <th>Accion</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,6 +32,11 @@
                         <td>{{ $row->Area_solicitante}}</td>
                         <td>{{ $row->Nombre_del_solicitante}}</td>
                         <td>{{ $row->Fecha}}</td>
+                        <td>
+                            <form action="{{ route('getpdf', $row->ID_SolicitudM) }}" method="get">
+                                <button type="submit" class="btn btn-primary btn-sm">Get Pdf</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>

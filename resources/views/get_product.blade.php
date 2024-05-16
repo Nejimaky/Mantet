@@ -21,6 +21,9 @@
                 <thead>
                     <tr>
                         <th>Nombre</th>
+                        <th>Tipo de equipo</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
                         <th>Cantidad</th>
                         <th>Eliminar</th>
                     </tr>
@@ -29,6 +32,9 @@
                 @foreach ($data as $row)
                     <tr>
                         <td>{{ $row->Nombre}}</td>
+                        <td>{{ $row->EquipoMant}}</td>
+                        <td>{{ $row->Marca}}</td>
+                        <td>{{ $row->Modelo}}</td>
                         <td>{{ $row->Cantidad}}</td>
                         <td>
                             <form action="{{ route('getproduct', $row->ID_Producto) }}" method="post">

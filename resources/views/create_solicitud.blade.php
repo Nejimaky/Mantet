@@ -9,6 +9,8 @@
 
 {{--  es para que el contenido se muestre dentro de la plantilla, recibe el nombre de @yield() de app.blade.php --}}
 @section('content') 
+
+<!-- @dump($productos) -->
 <div class="col py-3">
     <h1 class="text-center">Crea una nueva solicitud de mantenimiento</h1>
     <!-- <p class="lead">Rellena todos los campos del formulario.</p> -->
@@ -31,6 +33,15 @@
                     <option value="Sindicato de Maestros">Sindicato de Maestros</option>
                     <option value="Departamento de Computo">Departamento de Computo</option>
                     <option value="DEPI">DEPI</option>
+                </select>
+            </div>
+            <div class="col-3">
+                <label for="">Equipo</label>
+                <select class="form-select" id="ProductoMant" name="ProductoMant">
+                    <option selected>Selecciona una opción</option>
+                    @foreach($productos as $producto)
+                        <option value="{{ $producto->ID_Producto }}">{{ $producto->Nombre }}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="col-5">

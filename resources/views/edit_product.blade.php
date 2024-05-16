@@ -27,8 +27,25 @@
                         <label for="nombre" class="form-label">Nombre del producto</label>
                         <input type="text" class="form-control" id="nombre" name="Nombre" value="{{ $data->Nombre }}">
                     </div>
+                    <div class="col-5">
+                        <label for="text">Tipo de Equipo</label>
+                        <select class="form-select" id="EquipoMant" name="EquipoMant" value="{{ $data->EquipoMant }}">
+                            <option selected>Selecciona una opción</option>
+                            <option value="Computadora">Computadora</option>
+                            <option value="Impresora">Impresora</option>
+                            <option value="Proyector">Proyector</option>
+                        </select>
+                    </div>
                     <div class="mb-3">
-                        <label for="cantidad" class="form-label">Cantidad</label>
+                        <label for="Marca" class="form-label">Marca</label>
+                        <input type="text" class="form-control" id="Marca" name="marca" value="{{ $data->Marca }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Modelo" class="form-label">Modelo</label>
+                        <input type="text" class="form-control" id="Modelo" name="modelo" value="{{ $data->Modelo }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Cantidad" class="form-label">Cantidad</label>
                         <input type="number" class="form-control" id="cantidad" name="Cantidad" value="{{ $data->Cantidad }}">
                     </div>
                     <button type="submit" class="btn btn-primary">Agregar producto</button>

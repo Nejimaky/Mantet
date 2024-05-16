@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\producto;
 use App\Models\solicitud_mantenimiento;
 use App\Models\usuario;
+use Dompdf\Dompdf;
 
 class data extends Controller
 {
@@ -21,6 +22,8 @@ class data extends Controller
             session()->flash('status', 'Elemento creado');
             return redirect()->route('addSolicitud');
         } catch (\Throwable $th) {
+            $holis = solicitud_mantenimiento::create($a_data);
+            return $holis;
             session()->flash('status', 'Error al crear');
         }
     }
@@ -32,7 +35,8 @@ class data extends Controller
             session()->flash('status', 'Producto creado');
             return redirect()->route('NewProduct');
         } catch (\Throwable $th) {
-            session()->flash('status', 'Error al crear el producto');
+            $msg = producto::create($a_data);
+            session()->flash('status', 'Error al crear el producto'. $msg);
         }
     }
 
@@ -68,6 +72,30 @@ class data extends Controller
             session()->flash('status', 'Error al actulizar el producto');
             return redirect()->route('readProduct');
         }
+    }
+
+    public function getpdf ($id){
+        // return $id;
+        // instantiate and use the dompdf class
+        $data = solicitud_mantenimiento::find($id);
+        if(empty($data)){
+           return 'no hay registros';
+        }
+        $dompdf = new Dompdf();
+    
+        return view('pdf', ['data' => $data]);
+        return false;
+        $dompdf->loadHtml(view('pdf', ['data' => $data]));
+    
+
+        // (Optional) Setup the paper size and orientation
+        $dompdf->setPaper('A4', 'landscape');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // Output the generated PDF to Browser
+        $dompdf->stream();
     }
 
 }

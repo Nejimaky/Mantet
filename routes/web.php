@@ -29,6 +29,9 @@ Route::get('/solicitudes', [data::class, 'index'])->name('solicitudCreada');
 
 Route::get('/productos', [data::class, 'getProduct'])->name('readProduct');
 
+// get pdf
+Route::get('/pdf/{id}', [data::class, 'getpdf'])->name('getpdf');
+
 
 Route::post('Create', [data::class, 'create2'])->name('adddata');
 
