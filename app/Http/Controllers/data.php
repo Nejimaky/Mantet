@@ -74,27 +74,44 @@ class data extends Controller
         }
     }
 
-    public function getpdf ($id){
-        // return $id;
-        // instantiate and use the dompdf class
+    // public function getpdf ($id){
+    //     // return $id;
+        
+    //     // instantiate and use the dompdf class
+    //     $data = solicitud_mantenimiento::find($id);
+    //     if(empty($data)){
+    //        return 'no hay registros';
+    //     }
+    //     $dompdf = new Dompdf();
+    
+    //     return view('pdf', ['data' => $data]);
+    //     return false;
+    //     $dompdf->loadHtml(view('pdf', ['data' => $data]));
+    
+
+    //     // (Optional) Setup the paper size and orientation
+    //     $dompdf->setPaper('A4', 'landscape');
+
+    //     // Render the HTML as PDF
+    //     $dompdf->render();
+
+    //     // Output the generated PDF to Browser
+    //     $dompdf->stream();
+    // }
+    public function getpdf($id)
+    {
         $data = solicitud_mantenimiento::find($id);
-        if(empty($data)){
-           return 'no hay registros';
+        if (empty($data)) {
+            return 'no hay registros';
         }
+
         $dompdf = new Dompdf();
-    
-        return view('pdf', ['data' => $data]);
-        return false;
-        $dompdf->loadHtml(view('pdf', ['data' => $data]));
-    
+        $html = view('pdf', ['data' => $data])->render();
 
-        // (Optional) Setup the paper size and orientation
+        $dompdf->loadHtml($html);
         $dompdf->setPaper('A4', 'landscape');
-
-        // Render the HTML as PDF
         $dompdf->render();
 
-        // Output the generated PDF to Browser
         $dompdf->stream();
     }
 

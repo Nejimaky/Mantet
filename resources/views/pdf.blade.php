@@ -6,9 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-
-
-    <!-- @dump($data->ID_SolicitudM) -->
+    @dump($data->ID_SolicitudM)
     @dump($data)
     
 </body>

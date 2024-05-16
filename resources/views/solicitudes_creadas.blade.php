@@ -20,9 +20,9 @@
                     <tr>
                         <th>Folio</th>
                         <th>Area solicitante</th>
-                        <th>Nombre del solicitante</th>
+                        <th>Tipo de Mant.</th>
                         <th>Fecha</th>
-                        <th>Accion</th>
+                        <th>PDF</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,8 +30,9 @@
                     <tr>
                         <td>{{ $row->ID_SolicitudM}}</td>
                         <td>{{ $row->Area_solicitante}}</td>
-                        <td>{{ $row->Nombre_del_solicitante}}</td>
-                        <td>{{ $row->Fecha}}</td>
+                        <!-- <td>{{ $row->Nombre_del_solicitante}}</td> -->
+                        <td>{{ $row->Tipo_de_mantenimiento_a_realizar}}</td>
+                        <td>{{$row->Fecha}}</td>
                         <td>
                             <form action="{{ route('getpdf', $row->ID_SolicitudM) }}" method="get">
                                 <button type="submit" class="btn btn-primary btn-sm">Get Pdf</button>
