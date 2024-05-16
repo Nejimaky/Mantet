@@ -25,26 +25,35 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card bg-info mb-3" style="max-width: 18rem;">
-                    <div class="card-header"><h4>Mant. Preventivo</h4></div>
-                    <div class="card-body">
-                        <p class="card-text"> {{ $valor }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card bg-info mb-3" style="max-width: 18rem;">
-                    <div class="card-header"><h4>Mant. Correctivo</h4></div>
-                    <div class="card-body">
-                        <p class="card-text"> {{ $valor }}</p>
-                    </div>
-                </div>
-            </div>
+            @php
+    // Suponiendo que $datos contiene los registros recuperados de tu base de datos
+    $preventivos = $datos->where('Tipo_de_mantenimiento_a_realizar', 'Preventivo');
+    $correctivos = $datos->where('Tipo_de_mantenimiento_a_realizar', 'Correctivo');
+
+    $preventivo = count($preventivos);
+    $correctivo = count($correctivos);
+@endphp
+
+<div class="col">
+    <div class="card bg-info mb-3" style="max-width: 18rem;">
+        <div class="card-header"><h4>Mant. Preventivo</h4></div>
+        <div class="card-body">
+            <p class="card-text">{{ $preventivo }}</p>
         </div>
     </div>
-@endsection  
+</div>
+
+<div class="col">
+    <div class="card bg-info mb-3" style="max-width: 18rem;">
+        <div class="card-header"><h4>Mant. Correctivo</h4></div>
+        <div class="card-body">
+            <p class="card-text">{{ $correctivo }}</p>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+@endsection
+
+
+

@@ -104,14 +104,12 @@ class data extends Controller
         if (empty($data)) {
             return 'no hay registros';
         }
-
         $dompdf = new Dompdf();
         $html = view('pdf', ['data' => $data])->render();
 
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A4', 'landscape');
         $dompdf->render();
-
         $dompdf->stream();
     }
 

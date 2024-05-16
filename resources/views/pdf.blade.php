@@ -8,6 +8,5 @@
 <body>
     @dump($data->ID_SolicitudM)
     @dump($data)
-    
 </body>
 </html>

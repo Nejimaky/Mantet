@@ -26,16 +26,27 @@
                 </div>
             </div>
 
-            <!-- <div class="col">
+            <div class="col">
                 <div class="card" style="width: 18rem;">
                     <img src="/img/Almacen.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Agrega un nuevo producto al almacen</h5>
                         <p class="card-text">¡Innova tu Almacén! Añade un Toque de Eficiencia: Agrega un Nuevo Producto Ahora.</p>
-                        <a href="nuevo_producto.php" class="btn btn-primary">Agrega un nuevo producto</a>
+                        <a href="{{route('NewProduct')}}" class="btn btn-primary">Agrega un nuevo producto</a>
                     </div>
                 </div>
-            </div> -->
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="/img/hardware.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ve tus productos</h5>
+                        <p class="card-text">¡Toma el Control! Observa tus Productos y Sigue Avanzando.</p>
+                        <a href="{{route('readProduct')}}" class="btn btn-primary">Tus productos en almacen</a>
+                    </div>
+                </div>
+            </div>
 
             <div class="col">
                 <div class="card" style="width: 18rem;">
