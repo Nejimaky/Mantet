@@ -62,11 +62,11 @@
                     </li>
                 </ul>
             </li>
-            <li>
+            <!-- <li>
                 <a href="clientes.php" class="nav-link px-0 align-middle">
                     <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Clientes</span> </a>
-            </li>
-        </ul>
+            </li> -->
+        <!-- </ul>
         <hr>
         <div class="dropdown pb-4">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -81,6 +81,6 @@
                 </li>
                 <li><a class="dropdown-item" href="login.php">Cerrar Sesión</a></li>
             </ul>
-        </div>
+        </div> -->
     </div>
 </div>

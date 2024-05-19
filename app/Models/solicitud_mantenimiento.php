@@ -23,6 +23,7 @@ class solicitud_mantenimiento extends Model
         'Tipo_de_servicio_a_realizar',
         'Reporte_técnico_del_servicio',
         'Medidas_aplicadas',
+        'Imagenes',
         ];
     /* por defecto se envian los siguientes campos en eloquoent  updated_at  y created_at*/
     /* esto evita que se envien esos campos */

@@ -102,15 +102,18 @@ class data extends Controller
     {
         $data = solicitud_mantenimiento::find($id);
         if (empty($data)) {
-            return 'no hay registros';
+            return response('No hay registros', 404);
         }
+
         $dompdf = new Dompdf();
         $html = view('pdf', ['data' => $data])->render();
 
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A4', 'landscape');
         $dompdf->render();
-        $dompdf->stream();
+
+        return $dompdf->stream();
     }
+
 
 }

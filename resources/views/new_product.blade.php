@@ -32,7 +32,7 @@
                             <option value="Computadora">Computadora</option>
                             <option value="Impresora">Impresora</option>
                             <option value="Proyector">Proyector</option>
-                        </select>
+                        </select>   
                     </div>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Marca</label>
